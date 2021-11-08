@@ -1,0 +1,19 @@
+.stars {
+  &__body {
+    position: relative;
+    width: fit-content;
+    color: $c-star-secondary;
+    -webkit-text-stroke: 0.5px $c-star-primary;
+
+    &::after {
+      content: "★ ★ ★ ★ ★";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 92%;
+      overflow: hidden;
+      white-space: nowrap;
+      color: $c-star-primary;
+    }
+  }
+}

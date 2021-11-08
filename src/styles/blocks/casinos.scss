@@ -1,0 +1,42 @@
+.casinos {
+  padding: 0 15px;
+
+  &__titles {
+    display: none;
+
+    @include onDesktop {
+      display: flex;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #1d1d1d;
+    }
+  }
+
+  &__title {
+    text-align: center;
+
+    &--1 {
+      flex: 0 0 20%;
+    }
+
+    &--2 {
+      flex: 0 0 39%;
+    }
+
+    &--3 {
+      flex: 0 0 13%;
+    }
+
+    &--4 {
+      flex: 0 0 13%;
+    }
+
+    &--5 {
+      flex: 0 0 15%;
+    }
+  }
+
+  &__item {
+    margin-bottom: 25px;
+  }
+}

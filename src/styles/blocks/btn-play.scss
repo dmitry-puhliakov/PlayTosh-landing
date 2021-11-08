@@ -1,0 +1,27 @@
+.btn-play {
+  display: block;
+  width: 112px;
+  height: 30px;
+  outline: none;
+  border: transparent;
+  border-radius: 4px;
+  background-color: $c-btn-primery;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  @include onDesktop {
+    width: 130px;
+    height: 35px;
+  }
+
+  &:hover {
+    background-color: $c-btn-secondary;
+    color: $c-font-primary;
+  }
+
+  &:active {
+    border: 1px solid $c-btn-secondary;
+    background-color: $c-bg-secondary;
+    color: $c-btn-secondary;
+  }
+}

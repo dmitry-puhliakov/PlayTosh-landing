@@ -1,0 +1,32 @@
+.main {
+  min-width: 380px;
+
+  background-color: $c-bg-primary;
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% auto;
+
+  @include onDesktop {
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+  &__content {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+
+  &__header {
+    @include onDesktop {
+      text-align: center;
+    }
+  }
+
+  &__intro {
+    margin: 20px 15px;
+  }
+}

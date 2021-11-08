@@ -1,0 +1,17 @@
+.logo {
+  background-color: $c-bg-primary;
+
+  @include onDesktop {
+    background-color: transparent;
+  }
+
+  &__img {
+    width: 140px;
+    margin: 10px 30px;
+
+    @include onDesktop {
+      width: 210px;
+      margin-top: 20px;
+    }
+  }
+}

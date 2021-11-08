@@ -1,0 +1,21 @@
+.intro {
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include onDesktop {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__disc {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}

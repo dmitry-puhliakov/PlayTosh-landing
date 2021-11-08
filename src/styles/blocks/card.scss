@@ -1,0 +1,181 @@
+.card {
+  position: relative;
+  padding: 20px 10px;
+  border-radius: 5px;
+  background-color: $c-bg-secondary;
+
+  @include onDesktop {
+    padding: 0;
+  }
+
+  &__flag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 15px;
+    border-radius: 0 5px 0 0;
+    background-color: $c-flag-primery;
+
+    @include onDesktop {
+      top: -10px;
+      left: -10px;
+      right: initial;
+      padding: 5px 5px 5px 20px;
+      height: 20px;
+      border-radius: 0;
+      z-index: 99;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        background-color: $c-flag-secondary;
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        -webkit-clip-path: polygon(100% 0, 0 0, 100% 100%);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        background-color: $c-flag-primery;
+        clip-path: polygon(100% 0%, 50% 50%, 100% 110%, 0 100%, 0% 50%, 0 0);
+        -webkit-clip-path: polygon(
+          100% 0%, 50% 50%, 100% 100%, 0 110%, 0% 50%, 0 0
+        );
+        z-index: 99;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: block;
+    position: relative;
+    padding: 3px;
+    border: 2px solid $c-border-primary;
+    border-radius: 50%;
+    background-color: #eee;
+
+    @include onDesktop {
+      flex: 0 0 200px;
+      height: 121px;
+      padding: 0 10px 0 15px;
+      border: 0;
+      border-radius: 5px;
+      clip-path: polygon(94% 0%, 100% 50%, 94% 100%, 0% 100%, 0% 50%, 0% 0%);
+      -webkit-clip-path: polygon(
+        94% 0%, 100% 50%, 94% 100%, 0% 100%, 0% 50%, 0% 0%
+      );
+    }
+
+    &::after {
+      @include onDesktop {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 179px;
+        width: 20px;
+        height: 120px;
+        background-color: $c-bg-secondary;
+        clip-path: polygon(3px 0, 15px 50%, 3px 120px, 0 120px, 12px 50%, 0 0);
+        -webkit-clip-path: polygon(
+          3px 0, 15px 50%, 3px 120px, 0 120px, 12px 50%, 0 0
+        );
+      }
+    }
+  }
+
+  &__logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+
+    @include onDesktop {
+      width: 160px;
+      height: 120px;
+    }
+  }
+
+  &__text {
+    padding: 0 15px;
+
+    @include onDesktop {
+      flex: 0 0 30%;
+    }
+  }
+
+  &__title {
+    padding-bottom: 15px;
+
+    @include onDesktop {
+      display: none;
+    }
+  }
+
+  &__disc {
+    &--dep {
+      &::before {
+        content: "+ ";
+
+        @include onDesktop {
+          content: "";
+        }
+      }
+    }
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__rating {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__rating-value {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+    }
+  }
+
+  &__play {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: start;
+
+    @include onDesktop {
+      align-self: center;
+      margin-right: 15px;
+    }
+  }
+
+  &__rating-stars {
+    &--m {
+      display: flex;
+      justify-content: flex-end;
+      margin: 5px 5px 10px;
+
+      @include onDesktop {
+        display: none;
+      }
+    }
+  }
+}
